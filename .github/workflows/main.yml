@@ -27,4 +27,4 @@ jobs:
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         LOCAL_DIR: public
-        ARGS: --delete
+        ARGS: --exclude-glob=**/.git*/** --exclude-glob=node_modules/** --delete --delete-excluded
